@@ -25,11 +25,6 @@ body {
     flex-wrap: wrap;
     justify-content: space-evenly;
   }
-  .row1 {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-  }
 
   .jc-between{
     justify-content: space-between;
@@ -58,9 +53,19 @@ body {
     width: 33.33%;
   }
 
+  .col-20{
+    width: 20%;
+  }
+
   .mt-50{
     margin-top: 50px;
   }
+
+  .pt-40{
+    padding-top: 40px;
+  }
+
+
 /*----------------------*/
 /*menu-sticky*/
 
@@ -141,18 +146,18 @@ h1 span {
 
 
  nav{
+  
+    bottom: 0;
+    left: 0;
     position: fixed;
-    width: 30vw;
     min-height: 50vh;
-    border-radius:88% 12% 87% 13% / 100% 53% 47% 0% ;
-    right: 0px;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-image: linear-gradient(to right, #ffffff, #cbfccb);
-    border-left: 1px solid #cfcfcf;
-    transform: translateX(150%);
+    background-color: white;
+    transform: translateX(250%);
     transition: transform 0.9s cubic-bezier(0.73, 0.11, 0.67, 0.84);
     
 }
@@ -206,19 +211,20 @@ nav a {
     
     .image-container img {
       display: block;
+      position: relative;
       width: 100%;
-      z-index:1;
+    
     }
     
     .text-overlay {
       position: absolute;
-      top: 850px;
-      left: 350px;
-      width: 100%;
-      
+      top: 80%; /* Centre verticalement le texte - ajustez selon les besoins */
+      left: 55%; /* Centre horizontalement le texte */
+      transform: translate(-50%, -50%); /* Alignement précis au centre */
+      width: 100%; /* Assure que le texte ne dépasse pas les limites de l'image */
       box-sizing: border-box;
       color: #ffffff;
-      text-align: end;
+      text-align: center; /* Assure que le texte est centré à l'intérieur de la boîte */
     }
     
     .text-overlay h1 {
@@ -450,7 +456,7 @@ section#contact {
     margin:auto;
     display: flex;
     justify-content: space-between;
-    
+    max-width: ;width: 1440px;
     padding: 10px;
     padding-bottom: 20px;
     
@@ -467,12 +473,15 @@ section#contact {
     background-color: black;
     color: rgb(221, 235, 34);
   }
-  .tof-slide img {
-    width: 100%; /* Assure que l'image prend la largeur complète de son conteneur */
-    height: auto; /* Maintient l'aspect ratio de l'image */
-    display: block; /* Assure que l'image ne prend pas plus d'espace que nécessaire */
-    margin: 0 auto; /* Centre l'image horizontalement */
-}
+  .tof-slide img{
+    display: flex;
+    justify-content: center;
+    width: 1440px;
+    border-radius: 2%;
+    margin:auto;
+    padding-bottom: 0px;
+    padding-top: 100px;
+  }
   .size-H {
     font-size: 20px;
   }
@@ -484,7 +493,6 @@ section#contact {
     font-size: 20px;
     max-width: 1440px;
     font-weight: 600;
-    padding-bottom: 40px;
   }
  .splide__slide img {
   width: 100%;
@@ -496,127 +504,145 @@ section#contact {
     font-size: 25px;
     padding-bottom: 20px;
     }
-  .contenu-footer2 {
-    margin: 0 ;
-    display: flex;
-    flex-direction: row;
-    justify-content:space-around;
-    font-size: 10px;
-    background-color: rgb(1, 51, 59);
-    color: white;
-    padding-right: 160px;
-    gap:980px;
-    cursor: pointer;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    
+    .contenu-footer2 {
+      font-size: 10px;
+      background-color: rgb(1, 51, 59);
+      color: white;
+      cursor: pointer;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .footer-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between; /* Modifiez ici pour espacer les éléments */
+      width: 80%; /* Assurez-vous que le conteneur s'étend sur toute la largeur disponible */
     }
   .photos img{
     width: 20%;
   }
   
-.bas {
-  max-width: 1440px;
-  margin: auto;
-  display: flex;
-  justify-content: space-between; 
-  align-items: center; 
-  cursor: pointer;
-}
-.details h5 {
+
+ h5 {
   font-size: 20px;
 }
-div.details {
-  gap: 250px;
-  text-align: start;
-  display: flex;
-  cursor: pointer;
-}
+
 div i {
     border: white solid 1px;
-    padding: 5px;
+    padding: 15px;
     border-radius: 30%;
 }
   .contenu-footer div p{
-  padding-top: 30px;
+  padding-top: 25px;
+  gap: 10px;
   }
 .fa-solid {
     border: #053B44;
 }
 .footer-footer p{
   font-size: 12px;
-    padding-left: 130px;
     cursor: pointer;
 }
-.footer-footer{
-  padding-left: 50px;
-}
-div.row.bas {
-  justify-content: flex-start;
-}
-
-.footer-footer2 i{
-  margin-left: 20px;
-}
-.GPS {
+div.footer-footer{
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 10px;
-  margin-top: 20px;
-  padding-top: 30px;
-  padding-left: 168px;
 }
 
-.telephone,
-.localisation {
+.contact-info {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 10px;
-  padding-top: 18px;
+  align-items: center; 
 }
-
-.telephone i,
-.localisation i {
-  margin-right: 10px;
-  padding-bottom: 30px;
+.fa-brands {
+  font-size: 15px;
 }
-.localisation  {
-  padding-right: 20px;
-  text-align: start;
+.contact-info ul {
+  margin-left: 10px;
 }
+@media screen and (max-width: 1200px) {
+  .text-overlay h1 {
+    font-size: 3em;
+  }
 
-.telephone p,
-.localisation p {
-  margin: 0;
+  .text-overlay .text-banner {
+    font-size: 1em; 
+  }
+  
+  .col-lg-100{
+    width: 100%;
+  }
 }
+@media screen and (max-width: 968px) {
+  .text-overlay h1 {
+    font-size: 2em;
+  }
 
+  .text-overlay .text-banner {
+    font-size: 1em; 
+  }
+  
 
+  .img-team-md{
+    width: 90%;
+  }
 
+  .w-sm-90{
+    width: 90% !important;
+    margin: auto;
+  }
+  div.contact-info{
+    display: block;
+  }
+  
+}
+@media screen and (max-width: 650px) {
+  .text-overlay h1 {
+    display: none;
+  }
+
+  .text-overlay .text-banner {
+    font-size: 1em; 
+  }
+  
+  .col-sm-100{
+    width: 100% !important;
+  }
+  div.contact-info{
+    display: block;
+  }
+  .footer-footer {
+    flex-direction: column;
+    
+  }
+}
 
 @media screen and (max-width: 968px) {
     /* Menu */
     .menu-fixe{
         display: none;
-        
     }
 
 .debut H1 {
-    width: auto;
-    display: none
+    
 }
 .col-md-100{
   width: 100% !important;
 }
+.col-md-50{
+  width: 50%;
+}
+.text-md-center{
+  text-align: center;
+}
 .nav-toggler {
-    left:253px;
+    left:800px;
     position: fixed;
     z-index: 10;
-    top: 30px;
+    top: 800px;
     right: 30px;
     height: 50px;
-    width: 50px;
+    width: 40px;
     border: none;
     outline: none;
     cursor: pointer;
@@ -633,8 +659,8 @@ div.row.bas {
     background: #3ab51e;
     transition: transform 0.3s ease-out,
     opacity 0.1s ease-out;
-    top: 20px;
-    left: 130px;
+    top: 30px;
+    left: 0px;
     height: 5px;
 }
 
@@ -659,19 +685,19 @@ div.row.bas {
     transform: translateY(0px) rotate(-135deg);
 }
 
- nav{
+nav{
+  border-top: #000000 solid 1px;
+    bottom: 0;
+    left: 0;
     position: fixed;
+    min-height: 50vh;
     width: 100%;
-    height: 358px;
-    min-height: 40%;
-    
-    
     display: flex;
+    justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-image: linear-gradient(to right, #ffffff, #cbfccb);
-    
-    transform: translateX(250%);
+    background-color: white;
+    transform: translateX(150%);
     transition: transform 0.9s cubic-bezier(0.73, 0.11, 0.67, 0.84);
     
 }
@@ -759,60 +785,25 @@ nav a {
     }
     
     /* À propos de nous */
-   
-    h3.titre-cadre{
-      width: 100%;
-      flex-direction: column;
-    }
-    .cadre-rond{
-      width: 100%;
-      
-    }
-    .col-49, .col-md-50 {
-      width: 100%; /* Ajuste la largeur pour prendre toute la largeur disponible */
-      display: block; /* Change l'affichage pour permettre le centrage */
-      text-align: center; /* Centre le texte à l'intérieur */
-      margin-bottom: 20px; /* Ajoute un espace en bas de chaque colonne pour la séparation */
-  }
-    .img-team {
-        display: block; /* Nécessaire pour permettre le centrage avec margin auto */
-        margin: 0 auto; /* Centre l'image horizontalement */
-        max-width: 90%; /* Limite la taille maximale de l'image pour éviter qu'elle soit trop grande */
-        height: auto; /* Maintient le rapport hauteur/largeur de l'image */
-    }
     .cadre2 {
-      margin: 0 auto; /* Centre le cadre horizontalement */
-      padding: 20px; /* Ajoute de l'espace autour du texte à l'intérieur du cadre */
-      box-sizing: border-box; /* S'assure que le padding est inclus dans la largeur définie */
-      max-width: 90%; /* Contrôle la largeur pour éviter que le cadre soit trop large */
-  }
-  .titre1 {
-    font-size: 2.5em; /* Ajuste la taille du titre pour qu'il soit approprié pour les petits écrans */
-}
-.tof-slide img {
-  max-width: 80%; /* Réduit la taille maximale de l'image à 80% de son conteneur */
-}
-    /*Notre galerie**/
-    .cadres-ronds {
-      display: none;
+      padding: 20px;
       flex-direction: column;
-      
-  }
-  .cadre-avec-titre{
-    align-items: center;
-  }
-  .row1 {
-    
-    display: block;
+    }
+    .mobile {
+        
+        flex-direction: column;
+    }
+    /*Notre galerie**/
   
     .tof-slide img{
       width: 100%;
+      
     }
     /* Slide */
     .bouton {
-      width: 100px;
+      width: 100%;
+      justify-content: space-between;
     }
-    
     .bas {
       flex-direction: column;
     }
@@ -824,73 +815,97 @@ nav a {
       justify-content: center;
     }
   }
-  @media (max-width: 768px) {
-    .col-33, .col-md-100 {
-        width: 100%; /* Force chaque colonne à prendre toute la largeur */
-        float: none; /* Empêche les colonnes de flotter à gauche ou à droite */
-    }
-}
-
-  @media screen and (max-width: 450px) {
-    /* Réglages pour les écrans de moins de 450 pixels */
   
-    /* Réduire la taille des titres */
-    .details h5 {
-      font-size: 16px;
-    }
-  
-    /* Ajustement de la disposition des éléments */
-    .bas {
-      flex-direction: column;
-      align-items: stretch;
-    }
-  
+  @media screen and (max-width: 600px) {
     .details {
-      flex-direction: column;
-      align-items: center;
-      gap: 10px; /* Réduire l'espace entre les éléments */
+      flex-direction: column; 
+      gap: 20px; 
     }
-    div.details{
-    gap: 0px;
-  }
-    /* Ajustements pour les icônes */
     .GPS {
-      padding-left: 0;
-      padding-top: 10px;
+      flex-direction: column; 
+      gap: 20px; 
+      align-items: center; 
+      padding-right: 0; 
     }
-  
-    .telephone,
-    .localisation {
-      padding: 0;
+  }
+  @media screen and (max-width: 450px) {
+    .cadres-ronds {
+      display: block;
+      width: 100%;
     }
-  
-    .telephone i,
-    .localisation i {
-      margin-right: 5px;
+    .cadre2 {
+      border: none;
     }
-  
-    /* Ajustements pour le footer */
-    .contenu-footer2 {
-      font-size: 8px;
-      padding-right: 0;
-      gap: 0;
-      padding-top: 10px;
-      padding-bottom: 10px;
-    }
-  
-    .footer-footer {
-      padding-left: 10px;
-    }
-  
-    /* Réduire la taille des icônes du footer */
-    .footer-footer2 i {
-      margin-left: 10px;
-      font-size: 12px;
-    }
-  
-    /* Ajustements pour le paragraphe du footer */
-    .footer-footer p {
-      font-size: 10px;
-      padding-left: 10px;
-    }
-  }}
+  }
+  @media screen and (max-width: 811px) {
+    .nav-toggler {
+      left:700px;
+      position: fixed;
+      z-index: 10;
+      top: 800px;
+      right: 30px;
+      height: 50px;
+      width: 40px;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: transparent; }
+  }
+  @media screen and (max-width: 713px) {
+    .nav-toggler {
+      left:500px;
+      position: fixed;
+      z-index: 10;
+      top: 800px;
+      right: 30px;
+      height: 50px;
+      width: 40px;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: transparent; }
+  }
+  @media screen and (max-width: 555px) {
+    .nav-toggler {
+      left:380px;
+      position: fixed;
+      z-index: 10;
+      top: 800px;
+      right: 30px;
+      height: 50px;
+      width: 40px;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: transparent; }
+  }
+  @media screen and (max-width: 425px) {
+    .nav-toggler {
+      left:280px;
+      position: fixed;
+      z-index: 10;
+      top: 800px;
+      right: 30px;
+      height: 50px;
+      width: 40px;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: transparent; }
+  }
+  .footer ul li {
+    list-style: none;
+    margin-left: -40px;
+  }
